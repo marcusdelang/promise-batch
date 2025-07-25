@@ -1,5 +1,5 @@
 {
-  "name": "promise-batch",
+  "name": "@delang/promise-batch",
   "version": "1.0.0",
   "description": "Run Promises in controlled batches rather than all at once.",
   "license": "MIT",
