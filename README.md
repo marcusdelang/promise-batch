@@ -36,18 +36,6 @@ console.log(results);
 | `tasks`     | `(() => Promise<T>)[]`  | Array of functions that each return a Promise    |
 | `batchSize` | `number`                | Number of tasks to run concurrently              |
 
-## Example
-
-```ts
-const delays = [100, 200, 300, 400, 500];
-const tasks = delays.map(delay => () =>
-  new Promise(resolve => setTimeout(() => resolve(delay), delay))
-);
-
-const results = await promiseBatch(tasks, 2);
-console.log(results); // [100, 200, 300, 400, 500]
-```
-
 ## 📄 License
 
 MIT © [delang](https://github.com/marcusdelang)
