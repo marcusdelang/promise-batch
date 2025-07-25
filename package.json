@@ -1,15 +1,15 @@
 {
   "name": "@delang/promise-batch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Run Promises in controlled batches rather than all at once.",
   "license": "MIT",
   "main": "dist/cjs/index.js",
-  "type": "module",
-  "module": "dist/esm/index.js",
+  "module": "dist/esm/index.mjs",
   "types": "dist/cjs/index.d.ts",
   "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
+    "types": "./dist/cjs/index.d.ts",
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.mjs"
   },
   "files": [
     "dist",
@@ -17,9 +17,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build:cjs": "tsc --project tsconfig.build.cjs.json",
-    "build:esm": "tsc --project tsconfig.build.esm.json",
-    "build": "npm run build:cjs && npm run build:esm"
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -34,6 +32,7 @@
     "typescript"
   ],
   "devDependencies": {
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   }
 }

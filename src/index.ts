@@ -1,4 +1,4 @@
-/**
+/*!
  * Executes Promises in chunks, limiting concurrency.
  *
  * @param tasks An array of functions returning Promises.
