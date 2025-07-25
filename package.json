@@ -1,6 +1,6 @@
 {
   "name": "@delang/promise-batch",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Run Promises in controlled batches rather than all at once.",
   "license": "MIT",
   "main": "dist/cjs/index.js",

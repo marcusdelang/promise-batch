@@ -3,20 +3,20 @@
 **Run Promises in controlled batches instead of all at once.**  
 Useful for throttling I/O, API calls, or any async operations where concurrency control is needed.
 
-## ✨ Features
+## Features
 
 - Simple Promise batching interface
 - Supports both ESM and CommonJS
 - TypeScript-ready
 - Lightweight and dependency-free
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @delang/promise-batch
 ```
 
-## 🚀 Usage
+## Usage
 
 ```ts
 import promiseBatch from '@delang/promise-batch';
@@ -36,7 +36,7 @@ console.log(results);
 | `tasks`     | `(() => Promise<T>)[]`  | Array of functions that each return a Promise    |
 | `batchSize` | `number`                | Number of tasks to run concurrently              |
 
-## 📘 Example
+## Example
 
 ```ts
 const delays = [100, 200, 300, 400, 500];
@@ -47,18 +47,6 @@ const tasks = delays.map(delay => () =>
 const results = await promiseBatch(tasks, 2);
 console.log(results); // [100, 200, 300, 400, 500]
 ```
-
-## 🧪 TypeScript
-
-Written in TypeScript with full type declarations included — no need for extra setup.
-
-## 🛠️ Build
-
-```bash
-npm run build
-```
-
-Builds both CommonJS and ESM outputs to the `dist/` folder.
 
 ## 📄 License
 
