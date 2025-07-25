@@ -1,0 +1,39 @@
+{
+  "name": "promise-batch",
+  "version": "1.0.0",
+  "description": "Run Promises in controlled batches rather than all at once.",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "type": "module",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:cjs": "tsc --project tsconfig.build.cjs.json",
+    "build:esm": "tsc --project tsconfig.build.esm.json",
+    "build": "npm run build:cjs && npm run build:esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcusdelang/promise-batch.git"
+  },
+  "keywords": [
+    "promise",
+    "batch",
+    "concurrency",
+    "async",
+    "promise.all",
+    "typescript"
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
